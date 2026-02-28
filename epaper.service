@@ -1,0 +1,15 @@
+[Unit]
+Description=E-Paper Frame Client
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/epaper
+ExecStart=/home/pi/epaper/venv/bin/python /home/pi/epaper/main.py
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=multi-user.target
