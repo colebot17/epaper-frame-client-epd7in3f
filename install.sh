@@ -7,6 +7,7 @@ sudo apt update
 sudo apt install -y python3 python3-venv python3-pip python3-pil python3-numpy
 
 echo "Creating virtual environment..."
+rm -rf venv
 python3 -m venv $APP_DIR/venv
 
 echo "Installing Python dependencies..."
