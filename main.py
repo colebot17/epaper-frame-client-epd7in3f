@@ -6,6 +6,7 @@ import io
 from PIL import Image
 from waveshare_epd import epd7in3f
 from wifi import generate_netplan
+from update import update_ota
 
 SERVER_WS = "ws://184.174.134.74:3000"
 SERVER_HTTP = "http://184.174.134.74:3000"
@@ -33,6 +34,9 @@ async def handle_connection(current_filename, epd):
                 epd.Clear()
             elif data["type"] == "setWifi":
                 generate_netplan(data["networks"])
+            elif data["type"] == "ota":
+                await ws.close()
+                update_ota()
     
     return current_filename
 
