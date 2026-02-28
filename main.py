@@ -47,7 +47,7 @@ async def getServerCurrent():
     res = requests.get(f"{SERVER_HTTP}/current", timeout=10)
     res.raise_for_status()
     j = json.loads(res.content)
-    return j.filename
+    return j["filename"]
         
 async def showServerFile(filename, epd):
     res = requests.get(f"{SERVER_HTTP}/image/{filename}", timeout=10)
