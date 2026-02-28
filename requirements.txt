@@ -9,3 +9,4 @@ RPi.GPIO
 spidev
 gpiozero
 lgpio
+pyyaml

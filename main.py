@@ -5,6 +5,7 @@ import requests
 import io
 from PIL import Image
 from waveshare_epd import epd7in3f
+from wifi import generate_netplan
 
 SERVER_WS = "ws://184.174.134.74:3000"
 SERVER_HTTP = "http://184.174.134.74:3000"
@@ -30,6 +31,8 @@ async def handle_connection(current_filename, epd):
                     await update_display(filename, epd)
             elif data["type"] == "clear":
                 epd.Clear()
+            elif data["type"] == "setWifi":
+                generate_netplan(data["networks"])
     
     return current_filename
 

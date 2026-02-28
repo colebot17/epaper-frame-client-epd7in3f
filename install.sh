@@ -1,8 +1,6 @@
 #!/bin/bash
 
 APP_DIR=$(pwd)
-SERVICE_NAME="epaper.service"
-SERVICE_PATH="/etc/systemd/system/$SERVICE_NAME"
 
 echo "Updating system packages..."
 sudo apt update
