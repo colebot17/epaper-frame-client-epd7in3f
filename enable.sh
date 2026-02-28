@@ -12,3 +12,4 @@ sudo cp $APP_DIR/epaper.service $SERVICE_PATH
 sudo systemctl daemon-reload
 sudo systemctl enable $SERVICE_NAME
 sudo systemctl restart $SERVICE_NAME
+echo "Service enabled."
