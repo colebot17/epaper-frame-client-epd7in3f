@@ -1,0 +1,15 @@
+[Unit]
+Description=Enable hotspot if no wifi connection
+After=network.target
+Wants=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/pi/epaper/network_check
+ExecStart=/home/pi/epaper/venv/bin/python /home/pi/epaper/network_check/network_check.py
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=multi-user.target
