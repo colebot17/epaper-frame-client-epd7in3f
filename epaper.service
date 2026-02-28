@@ -4,7 +4,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-User=pi
+User=root
 WorkingDirectory=/home/pi/epaper
 ExecStart=/home/pi/epaper/venv/bin/python /home/pi/epaper/main.py
 Restart=always
