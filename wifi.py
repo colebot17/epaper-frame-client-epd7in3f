@@ -22,11 +22,9 @@ def generate_netplan(networks):
     
     # add all other networks
     for network in networks:
-        netplan_config["network"]["wifis"]["wlan0"]["access-points"].append({
-            network["ssid"]: {
-                "password": network["password"]
-            }
-        })
+        netplan_config["network"]["wifis"]["wlan0"]["access-points"][network["ssid"]] = {
+            "password": network["password"]
+        }
     
     # save and apply the netplan
     netplan_path = "/etc/netplan/99-wifi.yaml"
