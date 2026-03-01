@@ -23,7 +23,7 @@ sudo cp $APP_DIR/hotspot/70-hotspot.yaml /etc/netplan/70-hotspot.yaml.disabled
 
 # copy and point to hostapd config file
 sudo cp $APP_DIR/hotspot/hostapd.conf /etc/hostapd/hostapd.conf
-echo 'DAEMON_CONF="/etc/hostapd/hostapd.conf"' >> /etc/default/hostapd
+sudo echo 'DAEMON_CONF="/etc/hostapd/hostapd.conf"' >> /etc/default/hostapd
 
 # unmask hostapd
 sudo systemctl unmask hostapd
