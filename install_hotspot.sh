@@ -1,4 +1,4 @@
-$APP_DIR=$(pwd)
+APP_DIR=$(pwd)
 
 echo "Enabling automatic hotspot..."
 
