@@ -15,7 +15,7 @@ echo "Installing Python dependencies..."
 $APP_DIR/venv/bin/pip install --upgrade pip
 $APP_DIR/venv/bin/pip install -r $APP_DIR/requirements.txt
 
-chmod +x enable.sh disable.sh update.sh
+chmod +x enable.sh disable.sh update.sh install_hotspot.sh
 
 ./install_hotspot.sh
 
