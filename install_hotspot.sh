@@ -21,6 +21,12 @@ sudo systemctl enable network_check_startup.service
 sudo cp $APP_DIR/hotspot/hostapd.conf /etc/hostapd/hostapd.conf
 sudo sed -i 's|^#\?DAEMON_CONF=.*|DAEMON_CONF="/etc/hostapd/hostapd.conf"|' /etc/default/hostapd
 
+# create an ap interface
+sudo iw dev wlan0_ap del
+sudo iw dev wlan0 interface add wlan0_ap type __ap
+sudo ip addr add 192.168.50.1/24 dev wlan0_ap
+sudo ip link set wlan0_ap up
+
 # unmask hostapd
 sudo systemctl unmask hostapd
 
