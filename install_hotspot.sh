@@ -1,3 +1,5 @@
+$APP_DIR = $(pwd)
+
 echo "Enabling automatic hotspot..."
 
 # copy scripts to enable/disable hotspot
