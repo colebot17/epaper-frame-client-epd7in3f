@@ -24,6 +24,11 @@ sudo sed -i 's|^#\?DAEMON_CONF=.*|DAEMON_CONF="/etc/hostapd/hostapd.conf"|' /etc
 # unmask hostapd
 sudo systemctl unmask hostapd
 
+# configure and enable dnsmasq (for dhcp)
+sudo cp $APP_DIR/hotspot/dnsmasq.conf /etc/dnsmasq.conf
+sudo systemctl enable dnsmasq
+sudo systemctl restart dnsmasq
+
 # run oneshot startup service
 sudo systemctl start network_check_startup.service
 

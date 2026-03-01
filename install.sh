@@ -4,7 +4,7 @@ APP_DIR=$(pwd)
 
 echo "Updating system packages..."
 sudo apt update
-sudo apt install -y python3 python3-venv python3-pip python3-pil python3-numpy networkd-dispatcher hostapd iproute2
+sudo apt install -y python3 python3-venv python3-pip python3-pil python3-numpy networkd-dispatcher hostapd dnsmasq
 sudo systemctl disable --now hostapd
 
 echo "Creating virtual environment..."
