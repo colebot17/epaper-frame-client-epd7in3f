@@ -1,7 +1,8 @@
 echo "Enabling automatic hotspot..."
 
-# copy script to run on network down
+# copy scripts to enable/disable hotspot
 sudo cp $APP_DIR/hotspot/enable_hotspot.sh /etc/networkd-dispatcher/off.d/enable_hotspot.sh
+sudo cp $APP_DIR/hotspot/disable_hotspot.sh /usr/local/bin/disable_hotspot.sh
 
 # copy startup check script
 sudo cp $APP_DIR/hotspot/network_check_startup.sh /usr/local/bin/network_check_startup.sh

@@ -2,8 +2,8 @@
 
 ./disable.sh
 
-sudo rm -f /etc/networkd-dispatcher/routable.d/network_up.sh
-sudo rm -f /etc/networkd-dispatcher/off.d/network_down.sh
+sudo rm -f /usr/local/bin/disable_hotspot.sh
+sudo rm -f /etc/networkd-dispatcher/off.d/enable_hotspot.sh
 sudo rm -f /usr/local/bin/network_check_startup.sh
 sudo rm -f /etc/systemd/system/network_check_startup.service
 sudo rm -f /etc/netplan/60-wifi.yaml
