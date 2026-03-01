@@ -19,6 +19,7 @@ sudo systemctl enable network_check_startup.service
 
 # copy disabled netplan file for hotspot
 sudo cp $APP_DIR/hotspot/70-hotspot.yaml /etc/netplan/70-hotspot.yaml.disabled
+chmod 600 /etc/netplan/70-hotspot.yaml.disabled
 
 # copy and point to hostapd config file
 sudo cp $APP_DIR/hotspot/hostapd.conf /etc/hostapd/hostapd.conf
