@@ -27,7 +27,7 @@ def generate_netplan(networks):
         }
     
     # save and apply the netplan
-    netplan_path = "/etc/netplan/99-wifi.yaml"
+    netplan_path = "/etc/netplan/60-wifi.yaml"
     with open(netplan_path, "w") as f:
         yaml.safe_dump(netplan_config, f, default_flow_style=False)
     subprocess.run(["chmod", "600", netplan_path], check=True)
